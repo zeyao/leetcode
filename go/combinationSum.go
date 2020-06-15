@@ -4,6 +4,7 @@ func main() {
 	/**
 		& * 定义了 go的指针
 		go 不像 java 传递对象的引用，
+		go 传递的是值
 		go 不是 面向对象， slice这里更像是java String 的传递，而不是list collection的传递，
 		需要等同于list的使用方法，需要指定指针
 
