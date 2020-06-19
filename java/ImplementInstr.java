@@ -1,9 +1,8 @@
 public class ImplementInstr {
     //Rolling hash
     class Solution {
-        int base = 256;
-        int mod = 1000000007;
-    
+    int base = 256;
+    int mod = 1000000007;
         public int strStr(String h, String n) {
             if (n.isEmpty()) {
                 return 0;
@@ -28,9 +27,7 @@ public class ImplementInstr {
             }
                    
             for (int i = len; i < h.length(); i++) {
-                hash = (hash * base + h.charAt(i)) % mod;
-                hash = ((hash - h.charAt(i-len) * pow % mod) + mod) % mod;
-                
+                hash = (hash * base + h.charAt(i) - h.charAt(i-len) * pow % mod) % mod;          
                 if (hash == targetHash) {
                     return i - len + 1;
                 }
